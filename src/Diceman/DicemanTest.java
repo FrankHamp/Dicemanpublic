@@ -14,10 +14,22 @@ package Diceman;
 
 
                 switch (myDice.getDice()) {
-                    case "":
+                    case 1:
                         DiceCount++;
                         break;
-                    case "":
+                    case 2:
+                        DiceCount++;
+                        break;
+                    case 3:
+                        DiceCount++;
+                        break;
+                    case 4:
+                        DiceCount++;
+                        break;
+                    case 5:
+                        DiceCount++;
+                        break;
+                    case 6:
                         DiceCount++;
                         break;
                     default:
