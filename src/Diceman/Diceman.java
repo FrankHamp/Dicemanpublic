@@ -3,33 +3,33 @@ package Diceman;
 import java.util.Random;
 
 public class Diceman  {
-    private String side; // "Heads" eller "Tails"
+    private String dice; // "Heads" eller "Tails"
     private Random random;
 
     // Constructor
     public Diceman() {
         this.random = new Random();
-        this.side = "Heads"; // default
+        this.dice = "Heads"; // default
     }
 
     // Metode til at kaste mønten
-    public void flip() {
+    public void Roll() {
         int result = random.nextInt(2); // 0 eller 1
-        side = (result == 0) ? "Heads" : "Tails";
+        dice = (result == 0) ? "Heads" : "Tails";
     }
 
     // Getter for side
-    public String getSide() {
-        return side;
+    public String getDice() {
+        return dice;
     }
 
     @Override
     public String toString() {
-        return side;
+        return dice;
     }
 }
 
 
 
 
-}
+
