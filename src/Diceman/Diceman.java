@@ -1,31 +1,46 @@
 package Diceman;
 
+
 import java.util.Random;
 
-public class Diceman  {
-    private String dice; // "Heads" eller "Tails"
+public class Diceman {
+
+    private String activity;   // The chosen activity
     private Random random;
 
     // Constructor
     public Diceman() {
         this.random = new Random();
-        this.dice = "Heads"; // default
+        this.activity = "Eat breakfast"; // default value
     }
 
-    // Metode til at kaste mønten
-    public void Roll() {
-        int result = random.nextInt(2); // 0 eller 1
-        dice = (result == 0) ? "Heads" : "Tails";
+    // Method to roll the dice
+    public void roll() {
+        int result = random.nextInt(6); // 0 to 5
+
+        if (result == 0) {
+            activity = "Eat breakfast";
+        } else if (result == 1) {
+            activity = "Study something boring";
+        } else if (result == 2) {
+            activity = "Go swimming";
+        } else if (result == 3) {
+            activity = "Go fishing";
+        } else if (result == 4) {
+            activity = "Call his mom";
+        } else {
+            activity = "Go back to bed";
+        }
     }
 
-    // Getter for side
-    public String getDice() {
-        return dice;
+    // Getter
+    public String getActivity() {
+        return activity;
     }
 
     @Override
     public String toString() {
-        return dice;
+        return activity;
     }
 }
 
